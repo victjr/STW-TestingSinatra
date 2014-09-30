@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="logo.png">
+
+    <title>Sistemas y Tecnologias Web</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap.css" rel="stylesheet">
+    <link href="/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="/landing-page.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/estilo.css">
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <div class="intro-header">
+        <div class="container panel text center">
+            <div class="row">
+                    <div class="fondo">
+                            <div class="texto col-lg-6 col-lg-offset-3">
+                                Introduzca un usuario de Twitter 
+                            </div>
+				            <div class="col-lg-6 col-lg-offset-3">
+				                <div >
+                                    <form action="/" method="post">
+                                        <input type="text" class="form-control" name="user"  value="" autofocus>
+                                        <button class="boton btn btn-success">Buscar</button>
+                                    </form>
+				                </div>
+				            </div>
+                <div class="contenido col-lg-6 col-lg-offset-3">
+                    <% if flash[:error1] %>
+                        <p ><%= flash[:error1] %>     
+                    <% elsif flash[:error] %>
+                        <p ><%= flash[:error] %>     
+                    <% elsif @twitter_username != ''%>
+                        <p>Sus amigos más populares son:</p>
+                        <ol>
+                            <% 10.times do |i| %>
+                                <li id="col"><%= @friends[i] %><br></li>
+                            <% end %>
+                        </ol>
+                    <%end%>
+                </div> 
+                </div>
+ 
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
