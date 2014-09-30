@@ -27,7 +27,7 @@ post '/' do
     flash[:error1] = "El campo de usuario no puede estar vacio"
   
   elsif (client.user? @twitter_username)
-    twitter_follower = client.friends(@twitter_username).take(50)
+    twitter_follower = client.friends(@twitter_username).take(100)
     @friends = Hash.new
     @friends = twitter_follower.map { |i| [i.name , i.followers_count]}
     

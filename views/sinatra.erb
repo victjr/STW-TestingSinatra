@@ -24,13 +24,27 @@
 </head>
 
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Sistemas y tecnologías Web</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="sinatra.erb">Home</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
 
     <div class="intro-header">
-        <div class="container panel text center">
+        <div class="container panel">
             <div class="row">
                     <div class="fondo">
-                            <div class="texto col-lg-6 col-lg-offset-3">
-                                Introduzca un usuario de Twitter 
+                            <div class="intro message col-lg-6 col-lg-offset-3">
+                            <h2>Introduzca un usuario de Twitter</h2>                            
                             </div>
 				            <div class="col-lg-6 col-lg-offset-3">
 				                <div >
@@ -40,22 +54,21 @@
                                     </form>
 				                </div>
 				            </div>
-                <div class="contenido col-lg-6 col-lg-offset-3">
-                    <% if flash[:error1] %>
-                        <p ><%= flash[:error1] %>     
-                    <% elsif flash[:error] %>
-                        <p ><%= flash[:error] %>     
-                    <% elsif @twitter_username != ''%>
-                        <p>Sus amigos más populares son:</p>
-                        <ol>
-                            <% 10.times do |i| %>
-                                <li id="col"><%= @friends[i] %><br></li>
-                            <% end %>
-                        </ol>
-                    <%end%>
-                </div> 
-                </div>
- 
+                            <div class="col-lg-6 col-lg-offset-3">
+                                <% if flash[:error1] %>
+                                    <p class="alert alert-danger" role="alert"><%= flash[:error1] %>     
+                                <% elsif flash[:error] %>
+                                    <p class="alert alert-danger" role="alert"><%= flash[:error] %>     
+                                <% elsif @twitter_username != ''%>
+                                    <ul class ="text-success list-group">
+                                        <a class="list-group-item active">Lista de amigos populares</a>
+                                        <% 10.times do |i| %>
+                                            <li class="list-group-item"><%= @friends[i] %></li>
+                                        <% end %>
+                                    </ul>
+                                <%end%>
+                            </div> 
+                    </div>
             </div>
         </div>
     </div>

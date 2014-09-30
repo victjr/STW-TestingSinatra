@@ -1,31 +1,20 @@
 
 .panel {
-            background: rgba(46, 51, 56, 0.2)!important;
+    background: rgba(46, 51, 56, 0.2)!important;
     margin-top: 2.5em;
-    margin-bottom: 0.5em;
-    padding-left:0em;
-    padding-right:0em;
-    padding-bottom: 2em;
-    border-left: 2em;
-    border-right: 2em;
-    border-top: 0em;
+    margin-bottom: 3.5em;    
+    border-right: 15em;
+    border-left: 50%;
 }
 
 .fondo {
     position: relative;
     padding-top: 5%;
     padding-bottom: 50%;
-}
-
-.texto{
-  color: white;
-  font-size: large;
-  font-family: helvetica;
-  padding-bottom: 1em;
-}
-
-.contenido{
-   border: 3px solid gray
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-right: 10em;
+    margin-left: 10em;
 }
 
 .formulario{
