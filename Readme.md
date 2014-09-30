@@ -1,30 +1,50 @@
 > # Sistemas y Tecnologías Web 2014-2015
 
-## Práctica 1 - Aplicación Web con Sinatra y Twitter
-![](http://www.sinatrarb.com/images/logo.png) ![](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSqkaC7xWC9-O5DIAh4wfm6j0MnbXowP8GhVuMjAq6eq7STlQhU)
-
-
-- - -
+![](http://www.sinatrarb.com/images/logo.png)
+## Práctica 2 - Testing Sinatra
 
 #### Objetivo
-El objetivo de esta práctica es empezar a usar *Sinatra* para desarrollar aplicaciones web en Ruby. Para ello usaremos la gema de *Twitter*, que nos aporta una API para poder interactuar con usuarios, tweets y demás elementos. El objetivo de la práctica es dado un usuario perteneciente a twitter, listar sus amigos mas populares.
+El objetivo de esta práctica es empezar a usar la metodología *TDD* con *Sinatra* para desarrollar aplicaciones web en Ruby. {...} . El objetivo de la práctica sigue siendo el mismo, dado un usuario perteneciente a twitter, listar sus amigos mas populares.
 
+- - -
+#### Estructura de la aplicación
+```
+├── configure.rb.example
+├── Gemfile
+├── Gemfile.lock
+├── public
+│   ├── bg.jpg
+│   ├── bootstrap.css
+│   ├── bootstrap.min.css
+│   ├── estilo.css
+│   ├── landing-page.css
+│   └── logo.png
+├── Rakefile
+├── Readme.md
+├── sinatra.rb
+└── views
+    └── sinatra.erb
+```
 
 - - -
 
 #### Modo de empleo
-  Para empezar a usar la práctica debemos hacer:
--   `bundle install`, en el directorio raiz de la aplicacion, para que instale las gemas de las que depende para funcionar.
-- Para correr la aplicación `ruby sinatra.rb`
-- Iremos al puerto **localhost:4567** y ya podremos interactuar con la aplicación.
+Para empezar a usar la práctica debemos hacer:
 
+-   `$ bundle install`, en el directorio raiz de la aplicacion, para que instale las gemas de las que depende para funcionar.
 
+-   Lo siguiente que debe hacer es dar de rellenar con sus credenciales el fichero *configure.rb.example*, dichas credenciales las debe conseguir [aquí](https://apps.twitter.com/), donde debe registrar su aplicación para conseguir la credenciales.
+
+- Para correr la aplicación `$ ruby sinatra.rb` o también podemos usar `$ rake`, que como tarea por defecto corre la aplicación.
+
+- Iremos al puerto **localhost:4567** en nuestro navegador y ya podremos interactuar con la aplicación.
 
 - - -
 
-###Autor
+###Autores
 
 - Vïctor Juidías Rodríguez - alu0100537017
+- Débora Martín Pinillos - alu0100537154
 
 
 
