@@ -10,7 +10,7 @@ def app
   Sinatra::Application
 end
 
-decribe "Test twitter.rb" do
+decribe "Test Sinatra" do
 	before :all do
 		@twitter_username = FriendsPopular.new
 		@client = my_twitter_client()
@@ -18,25 +18,25 @@ decribe "Test twitter.rb" do
 		@u2 = "pepitopepe"
 end
 
-if "El nombre de usuario debe ser correcto" do
-	assert @twitter_username.test_username(@client, @u1)
+it "El nombre de usuario debe ser correcto" do
+	assert @twitter_username.test_username(@client,@u1)
 end
 
-if "El número de usuarios a consultar debe ser menor o igual que 10" do
+it "El número de usuarios a consultar debe ser menor o igual que 10" do
 	assert_equal 10, @twitter_username.test_friends(@client,@u1)
 end
 
-if "El usuario no tiene tantos amigos" do
+it "El usuario no tiene tantos amigos" do
 	refute @twitter_username.test_friends(@client,@u1)
+end
 
-if "El usuario no tiene amigos" do
+it "El usuario no tiene amigos" do
 	assert @twitter_username.test_friends(@client,@u1)
 end
 
-if "No existe el usuario" do
+it "No existe el usuario" do
 	refute @twitter_username.test_username(@client,@u2)
 end
-
 end
 
 describe "paginaweb" do
