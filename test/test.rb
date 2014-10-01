@@ -1,8 +1,9 @@
 ENV['RACK_ENV'] = 'test'
-require 'test/unit'
+#require 'test/unit'
 require 'minitest/autorun'
 require 'rack/test'
 require_relative '../sinatra.rb'
+require './configure.rb'
 
 include Rack::Test::Methods
 
@@ -10,7 +11,7 @@ def app
   Sinatra::Application
 end
 
-decribe "Test Sinatra" do
+describe "Test Sinatra" do
 	before :all do
 		@twitter_username = FriendsPopular.new
 		@client = my_twitter_client()
