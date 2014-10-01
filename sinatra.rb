@@ -5,12 +5,12 @@ require 'sinatra/flash'
 
 require './configure'
 
-class FriendsPopular #lo usaremos para hacer los test unitarios de la api de twitter
+class FriendsPopular
   def test_username(client, name)
-    cliente.user? name
+    client.user? name
   end
   def test_friends(client, name)
-    cliente.user(name).friends_count
+    client.user(name).friends_count
   end
 end
 
