@@ -26,6 +26,9 @@ if "El número de usuarios a consultar debe ser menor o igual que 10" do
 	assert_equal 10, @twitt.friends(@client,@u1)
 end
 
+if "El usuario no tiene tantos amigos" do
+	refute @twitt.friend(@client,@u1)
+
 if "El usuario no tiene amigos" do
 	assert @twitt.friends(@client,@u1)
 end
