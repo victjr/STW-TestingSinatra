@@ -12,29 +12,29 @@ end
 
 decribe "Test twitter.rb" do
 	before :all do
-		@twitt = FriendsPopular.new
+		@twitter_username = FriendsPopular.new
 		@client = my_twitter_client()
 		@u1 = "DeboraMpb"
 		@u2 = "pepitopepe"
 end
 
 if "El nombre de usuario debe ser correcto" do
-	assert @twitt.usuario(@cliente, @u1)
+	assert @twitter_username.test_username(@client, @u1)
 end
 
 if "El número de usuarios a consultar debe ser menor o igual que 10" do
-	assert_equal 10, @twitt.friends(@client,@u1)
+	assert_equal 10, @twitter_username.test_friends(@client,@u1)
 end
 
 if "El usuario no tiene tantos amigos" do
-	refute @twitt.friends(@client,@u1)
+	refute @twitter_username.test_friends(@client,@u1)
 
 if "El usuario no tiene amigos" do
-	assert @twitt.friends(@client,@u1)
+	assert @twitter_username.test_friends(@client,@u1)
 end
 
 if "No existe el usuario" do
-	refute @twitt.usuario(@client,@u2)
+	refute @twitter_username.test_username(@client,@u2)
 end
 
 end
