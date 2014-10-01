@@ -27,7 +27,7 @@ if "El número de usuarios a consultar debe ser menor o igual que 10" do
 end
 
 if "El usuario no tiene tantos amigos" do
-	refute @twitt.friend(@client,@u1)
+	refute @twitt.friends(@client,@u1)
 
 if "El usuario no tiene amigos" do
 	assert @twitt.friends(@client,@u1)
@@ -35,6 +35,22 @@ end
 
 if "No existe el usuario" do
 	refute @twitt.usuario(@client,@u2)
+end
+
+end
+
+describe "paginaweb" do
+it "Cargar pagina en el servidor" do
+get '/'
+assert last_response.ok?
+end
+it "El titulo de la pagina es Sistemas y Tecnologias Web" do
+get '/'
+assert last_response.body.include?("<title>Sistemas y Tecnologias Web</title>"), "El titulo debe ser 'Sistemas y Tecnologias Web'"
+end
+it "Hay un formulario donde se pregunte el nombre de usuario " do
+get '/'
+assert last_response.body.include?("Introduzca un usuario de Twitter:"), "El body debe contener usuario de twitter"
 end
 
 end
