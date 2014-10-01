@@ -56,9 +56,9 @@
 				            </div>
                             <div class="col-lg-6 col-lg-offset-3">
                                 <% if flash[:error1] %>
-                                    <p class="alert alert-danger" role="alert"><%= flash[:error1] %>     
+                                    <p class="alert alert-danger"><%= flash[:error1] %>     
                                 <% elsif flash[:error] %>
-                                    <p class="alert alert-danger" role="alert"><%= flash[:error] %>     
+                                    <p class="alert alert-danger"><%= flash[:error] %>     
                                 <% elsif @twitter_username != ''%>
                                     <ul class ="text-success list-group">
                                         <a class="list-group-item active">Lista de amigos populares</a>

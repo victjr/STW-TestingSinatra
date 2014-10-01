@@ -6,6 +6,6 @@ gem 'thin'
 gem 'sinatra-flash'
 
 group :test do
-gem "rack-test"
-gem "rake"
+	gem "rack-test"
+	gem "rake"
 end

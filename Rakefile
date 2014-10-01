@@ -1,11 +1,11 @@
 
 desc "Arrancar la aplicacion"
 task :default do
-  sh "ruby sinatra.rb"
+	sh "ruby sinatra.rb"
 end
 
 
-desc "Ejecutar las Pruebas Unitarias"
+desc "Testing Sinatra"
 task :test do
-sh "ruby ./test/test.rb"
+	sh "ruby ./test/test.rb"
 end
