@@ -1,2 +1,2 @@
-require './twitter'
+require './twitter.rb'
 run Sinatra::Application
