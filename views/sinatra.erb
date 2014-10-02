@@ -55,17 +55,19 @@
 				                </div>
 				            </div>
                             <div class="col-lg-6 col-lg-offset-3">
-                                <% if flash[:error1] %>
-                                    <p class="alert alert-danger"><%= flash[:error1] %>     
-                                <% elsif flash[:error] %>
-                                    <p class="alert alert-danger"><%= flash[:error] %>     
-                                <% elsif @twitter_username != ''%>
-                                    <ul class ="text-success list-group">
-                                        <a class="list-group-item active">Lista de amigos populares</a>
-                                        <% 10.times do |i| %>
-                                            <li class="list-group-item"><%= @friends[i] %></li>
-                                        <% end %>
-                                    </ul>
+                                <%if @twitter_username != ''%>
+                                    <% if flash[:error] %>
+                                        <p class="alert alert-danger"><%= flash[:error] %> </p>
+                                    <%else%>
+                                        <ul class ="text-success list-group">
+                                            <a class="list-group-item active">Lista de amigos populares</a>
+                                            <% 10.times do |i| %>
+                                                <li class="list-group-item"><%= @friends[i] %></li>
+                                            <%end%>
+                                        </ul>
+                                    <%end%>
+                                <%else%>
+                                    <p class="alert alert-danger"><%= flash[:error1] %> </p>
                                 <%end%>
                             </div> 
                     </div>
