@@ -39,7 +39,7 @@ El objetivo de esta práctica es empezar a usar la metodología *TDD* con *Sinat
 El repositorio está divido en varias ramas, para facilitar el desarrollo de la aplicación:
 - *Master* es la rama principal de la aplicación, donde está todo el código de la aplicación de la última versión. Vendría a ser nuestra rama *release*.
 - *Development* se usa para desarrollar nuevas funcionalidades para la aplicación, es decir versión inestable, sin necesidad de tocar el código que hay en master, para que dicho código permanezca sin cambios hasta que éstos sean definitivos.
-- *Production*, es la rama con el código que está puesto en producción en Heroku.
+- *Production*, es la rama con el código que está puesto en producción en [Heroku](http://stark-tundra-2594.herokuapp.com/).
 - *gh-pages* contiene la documentación online de la aplicación.
 
 
