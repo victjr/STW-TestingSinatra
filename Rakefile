@@ -1,12 +1,7 @@
 
 desc "Arrancar la aplicacion"
 task :default do
-	sh "ruby sinatra.rb"
-end
-
-desc "Testing Sinatra"
-task :test do
-	sh "ruby ./test/test.rb"
+	sh "ruby twitter.rb"
 end
 
 desc "Instalar las gemas necesarias para la aplicacion"
