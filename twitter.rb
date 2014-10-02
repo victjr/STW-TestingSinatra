@@ -8,9 +8,11 @@ require './configure'
 enable :sessions
 
 class FriendsPopular
+  
   def test_username(client, name)
     client.user? name
   end
+
   def test_friends(client, name)
     client.user(name).friends_count
   end
@@ -21,9 +23,9 @@ end
 #********************************************************************************
 
 get '/' do
-  #@twitter_username = ''
-  @friends = Hash.new
-  erb :sinatra
+  @twitter_username = ''
+  #@friends = Hash.new
+  erb :index
 end
 
 #********************************************************************************
@@ -35,21 +37,19 @@ post '/' do
 
   
   if (@twitter_username == '')
-    flash[:error1] = "El campo de usuario no puede estar vacio"
+    flash[:error_vacio] = "El campo de usuario no puede estar vacio"
   end
 
   if (client.user? @twitter_username)
-    twitter_follower = client.friends(@twitter_username).take(100)
     @friends = Hash.new
-    @friends = twitter_follower.map { |i| [i.name , i.followers_count]}
-    
-    @friends = @friends.sort_by! {|k,v| -v}    
+    twitter_follower = client.friends(@twitter_username).take(50)
+    @friends = twitter_follower.map { |i| [i.name , i.followers_count]}.sort_by! {|k,v| -v}
   
   else
-    flash[:error] = "No existe ese usuario en Twitter"     
+    flash[:error_existe] = "No existe ese usuario en Twitter"     
   end
   
-  erb :sinatra
+  erb :index
 end
 
 #********************************************************************************

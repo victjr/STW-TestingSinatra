@@ -55,9 +55,13 @@
 				                </div>
 				            </div>
                             <div class="col-lg-6 col-lg-offset-3">
+                                <%if flash[:error_vacio] %>
+                                    <p class="alert alert-danger"><%= flash[:error_vacio] %> </p>
+                                <%end%>
+
                                 <%if @twitter_username != ''%>
-                                    <% if flash[:error] %>
-                                        <p class="alert alert-danger"><%= flash[:error] %> </p>
+                                    <% if flash[:error_existe] %>
+                                        <p class="alert alert-danger"><%= flash[:error_existe] %> </p>
                                     <%else%>
                                         <ul class ="text-success list-group">
                                             <a class="list-group-item active">Lista de amigos populares</a>
@@ -66,8 +70,6 @@
                                             <%end%>
                                         </ul>
                                     <%end%>
-                                <%else%>
-                                    <p class="alert alert-danger"><%= flash[:error1] %> </p>
                                 <%end%>
                             </div> 
                     </div>

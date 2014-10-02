@@ -3,7 +3,7 @@ ENV['RACK_ENV'] = 'test'
 require 'minitest/autorun'
 require 'rack/test'
 
-require_relative '../sinatra.rb'
+require_relative '../twitter.rb'
 
 include Rack::Test::Methods
 
@@ -19,7 +19,7 @@ describe "Test Sinatra" do
 		@u1 = "DeboraMpb"
 		@u2 = "pepitopepe"
 	end
-=begin
+
 	it "El nombre de usuario debe ser correcto" do
 		assert @twitter_username.test_username(@client,@u1)
 	end
@@ -39,12 +39,12 @@ describe "Test Sinatra" do
 	it "No existe el usuario" do
 		refute @twitter_username.test_username(@client, @u2)
 	end
-=end
+=begin
 	it "Cargar pagina en el servidor" do
 		get '/'
 		assert last_response.ok?
 	end
-=begin
+
 	it "El titulo de la pagina es Sistemas y Tecnologias Web" do
 		get '/'
 		assert last_response.body.include?("<title>Sistemas y Tecnologias Web</title>"), "El titulo debe ser 'Sistemas y Tecnologias Web'"
