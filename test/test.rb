@@ -39,7 +39,7 @@ describe "Test Sinatra" do
 	it "No existe el usuario" do
 		refute @twitter_username.test_username(@client, @u2)
 	end
-=begin
+
 	it "Cargar pagina en el servidor" do
 		get '/'
 		assert last_response.ok?
@@ -54,6 +54,5 @@ describe "Test Sinatra" do
 		get '/'
 		assert last_response.body.include?("Introduzca un usuario de Twitter:"), "El body debe contener usuario de twitter"
 	end
-=end
 end
 

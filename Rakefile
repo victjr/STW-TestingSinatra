@@ -1,7 +1,7 @@
 
 desc "Arrancar la aplicacion"
 task :default do
-	sh "ruby sinatra.rb"
+	sh "ruby twitter.rb"
 end
 
 desc "Testing Sinatra"
