@@ -10,7 +10,6 @@ El objetivo de esta práctica es empezar a usar la metodología *TDD* con *Sinat
 #### Estructura de la aplicación
 ```
 ├── configure.rb
-├── configure.rb.example
 ├── Gemfile
 ├── Gemfile.lock
 ├── public
@@ -27,8 +26,6 @@ El objetivo de esta práctica es empezar a usar la metodología *TDD* con *Sinat
 │       └── bootstrap.min.js
 ├── Rakefile
 ├── Readme.md
-├── test
-│   └── test.rb
 ├── twitter.rb
 └── views
     └── index.erb
