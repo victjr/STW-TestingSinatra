@@ -36,30 +36,7 @@ El objetivo de esta práctica es empezar a usar la metodología *TDD* con *Sinat
 
 - - -
 #### Ramas
-El repositorio está divido en varias ramas, para facilitar el desarrollo de la aplicación:
-- *Master* es la rama principal de la aplicación, donde está todo el código de la aplicación de la última versión. Vendría a ser nuestra rama *release*.
-- *Development* se usa para desarrollar nuevas funcionalidades para la aplicación, es decir versión inestable, sin necesidad de tocar el código que hay en master, para que dicho código permanezca sin cambios hasta que éstos sean definitivos.
-- *Production*, es la rama con el código que está puesto en producción en Heroku.
-- *gh-pages* contiene la documentación online de la aplicación.
-
-
-#### Modo de empleo **manual**
-
-Si se desea se puede descargar desde la rama master la aplicación para probarla en local, verla o modificarla al gusto de cada uno. Solo tiene que hacer:
-
-`$ git clone https://github.com/alu0100537017/STW_Practica2_TestingSinatra.git`
-    
-Una vez descargada la aplicación
-
-- Haremos un `$ rake install` o un  `$ bundle install`, como se prefiera, para que instale las gemas de las que depende la aplicación para funcionar.
-
--   Lo siguiente que debe hacer es dar de rellenar con sus credenciales el fichero *configure.rb.example*, dichas credenciales las debe conseguir [aquí](https://apps.twitter.com/), donde debe registrar su aplicación para conseguir la credenciales.
-
-- Para correr la aplicación `$ ruby sinatra.rb` o también podemos usar `$ rake`, que como tarea por defecto arranca la aplicación.
-
-- Iremos al puerto **localhost:4567** en nuestro navegador y ya podremos interactuar con la aplicación.
-
-- - -
+- Aplicacion en Heroku
 
 ###Autores
 
