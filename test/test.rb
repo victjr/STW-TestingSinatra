@@ -25,7 +25,7 @@ describe "Test Sinatra" do
 	end
 =begin
 	it "El número de usuarios a consultar debe ser menor o igual que 10" do
-		assert_equal 110, @twitter_username.test_friends(@client,@u1)
+		assert_equal 10, @client.friends(@u1).take(10)
 	end
 =end
 	it "El usuario no tiene tantos amigos" do
