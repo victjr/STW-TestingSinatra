@@ -17,17 +17,17 @@ describe "Test Sinatra" do
 		@twitter_username = FriendsPopular.new
 		@client = my_twitter_client()
 		@u1 = "DeboraMpb"
-		@u2 = "pepitopepe"
+		@u2 = "!!!"
 	end
 
 	it "El nombre de usuario debe ser correcto" do
 		assert @twitter_username.test_username(@client,@u1)
 	end
-
+=begin
 	it "El número de usuarios a consultar debe ser menor o igual que 10" do
-		assert_equal 110, @twitter_username.test_friends(@client,@u1)
+		assert_equal 10, @client.friends(@u1).take(10)
 	end
-
+=end
 	it "El usuario no tiene tantos amigos" do
 		refute_equal 2, @twitter_username.test_friends(@client,@u1)
 	end
@@ -52,7 +52,7 @@ describe "Test Sinatra" do
 
 	it "Hay un formulario donde se pregunte el nombre de usuario " do
 		get '/'
-		assert last_response.body.include?("Introduzca un usuario de Twitter:"), "El body debe contener usuario de twitter"
+		assert last_response.body.include?("Introduzca un usuario de Twitter"), "El body debe contener usuario de twitter"
 	end
 end
 

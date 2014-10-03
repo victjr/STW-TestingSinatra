@@ -1,11 +1,11 @@
 
 desc "Arrancar la aplicacion"
-task :default do
+task :run do
 	sh "ruby twitter.rb"
 end
 
 desc "Testing Sinatra"
-task :test do
+task :default do
 	sh "ruby ./test/test.rb"
 end
 
