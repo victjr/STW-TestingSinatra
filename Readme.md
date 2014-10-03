@@ -3,6 +3,8 @@
 ![](http://www.sinatrarb.com/images/logo.png)
 ## Práctica 2 - Testing Sinatra
 
+[GitHub Pages](http://alu0100537017.github.io/STW_Practica2_TestingSinatra/)
+
 #### Objetivo
 El objetivo de esta práctica es empezar a usar la metodología *TDD* con *Sinatra* para desarrollar aplicaciones web en Ruby. El objetivo de la práctica sigue siendo el mismo, dado un usuario perteneciente a twitter, listar sus amigos mas populares. Pero esta vez debemos de poner en producción la aplicación en la plataforma [Heroku](https://www.heroku.com/).
 
