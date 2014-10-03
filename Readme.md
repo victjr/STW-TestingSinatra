@@ -42,6 +42,8 @@ El repositorio está divido en varias ramas, para facilitar el desarrollo de la 
 - *Production*, es la rama con el código que está puesto en producción en [Heroku](http://stark-tundra-2594.herokuapp.com/).
 - *gh-pages* contiene la documentación online de la aplicación. [Gh-Pages](http://alu0100537017.github.io/STW_Practica2_TestingSinatra/).
 
+NOTA: Enlace a [**Travis**](https://travis-ci.org/alu0100537017/STW_Practica2_TestingSinatra).
+
 
 #### Modo de empleo **manual**
 
