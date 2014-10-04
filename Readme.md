@@ -61,6 +61,7 @@ Una vez descargada la aplicación
 
 - Iremos al puerto **localhost:4567** en nuestro navegador y ya podremos interactuar con la aplicación.
 
+- Para ejecutar los test tendremos que poner rake test.
 - - -
 
 ###Autores
